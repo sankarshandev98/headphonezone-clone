@@ -39,7 +39,7 @@
         padding-left: 15px;
         letter-spacing: 2px;
         cursor: pointer;
-        transition: .3s all;
+        transition: 0.3s all;
       }
       .active {
         background-color: #444444;
@@ -56,7 +56,29 @@
       #right {
         width: 78.2%;
         height: 355px;
-        border: 1px solid blue;
+        display: flex;
+        gap: 15px;
+      }
+      #right > div {
+        width: 370px;
+        height: 312px;
+        border-radius: 5px;
+        font-family: Roboto, sans-serif;
+        color: #444444;
+      }
+      #l {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #444444;
+        font-size: 20px;
+        border: 3px solid #e6e6e6;
+        border-style: dashed;
+      }
+      #r {
+        padding-left: 25px;
+        border: 1px solid #e6e6e6;
       }
     </style>
   </head>
@@ -77,17 +99,30 @@
         <a href="CONTACT_US.html">
           <p>CONTACT US</p>
         </a>
-        <a href="DELIVERY_ADDRESS.html">
+        <a class="active" href="DELIVERY_ADDRESS.html">
           <p>DELIVERY ADDRESS</p>
         </a>
-        <a class="active" href="RECENTLY_VIEWED_PRODUCTS.html">
+        <a href="RECENTLY_VIEWED_PRODUCTS.html">
           <p>RECENTLY VIEWED PRODUCTS</p>
         </a>
         <a href="CHANGE PASSWORD.html">
           <p>CHANGE PASSWORD</p>
         </a>
       </div>
-      <div id="right"></div>
+      <div id="right">
+        <div id="l">
+          <img src="https://img.icons8.com/ios/80/undefined/plus--v1.png" />
+          <p>Add New Address</p>
+        </div>
+        <div id="r">
+          <h2>DEFAULT</h2>
+          <h3>Sankarshan Goswami</h3>
+          <p>Galli Number 36 Nathupur Sector 24</p>
+          <p>122002 Gurugram HR</p>
+          <p>India</p>
+          <p>8250 163 607</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>

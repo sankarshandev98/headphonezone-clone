@@ -39,7 +39,7 @@
         padding-left: 15px;
         letter-spacing: 2px;
         cursor: pointer;
-        transition: .3s all;
+        transition: 0.3s all;
       }
       .active {
         background-color: #444444;
@@ -56,7 +56,26 @@
       #right {
         width: 78.2%;
         height: 355px;
-        border: 1px solid blue;
+      }
+      #right > div {
+        width: 355px;
+        height: 175px;
+        text-align: center;
+        margin-top: -45px;
+        margin-left: 20px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      #right > div > p {
+        color: #3b0af8;
+        cursor: pointer;
+        font-family: Roboto, sans-serif;
+        font-size: 20px;
+      }
+      #right > div > h1 {
+        padding-top: 40px;
+        font-family: Roboto, sans-serif;
+        color: #444444;
+        font-size: 25px;
       }
     </style>
   </head>
@@ -74,7 +93,7 @@
         <a href="CLUB_AUDIOPHILE_REWARDS.html">
           <p>CLUB AUDIOPHILE REWARDS</p>
         </a>
-        <a href="CONTACT_US.html">
+        <a class="active" href="CONTACT_US.html">
           <p>CONTACT US</p>
         </a>
         <a href="DELIVERY_ADDRESS.html">
@@ -83,11 +102,16 @@
         <a href="RECENTLY_VIEWED_PRODUCTS.html">
           <p>RECENTLY VIEWED PRODUCTS</p>
         </a>
-        <a class="active" href="CHANGE PASSWORD.html">
+        <a href="CHANGE PASSWORD.html">
           <p>CHANGE PASSWORD</p>
         </a>
       </div>
-      <div id="right"></div>
+      <div id="right">
+        <div>
+          <h1>RAISE A TICKET</h1>
+          <p href="">Submit a Ticket</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
