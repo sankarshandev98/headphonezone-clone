@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="http://www.google.com/s2/favicons?domain=https://www.headphonezone.in/">
-    <link rel="stylesheet" href="/css/signup.css">
-    <title>Account</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="http://www.google.com/s2/favicons?domain=https://www.headphonezone.in/"
+    />
+    <title>Create Account</title>
     <style>
       * {
         margin: 0px;
@@ -193,44 +195,117 @@
         }
       }
     </style>
-</head>
-<body>
-   <div id="container">
-<!-- ----------start above the sign up page content ------- -->
-    <div>
+  </head>
+  <body>
+    <div id="container">
+      <!-- ----------start above the sign up page content ------- -->
+      <div>
         <div>
-            <h1>LOGIN</h1>
-                <div>
-                    <div id="box1">
-                        <a href="/dummypages/facebook.html"><img src="/image/facebookico.png" alt=""> <span> Facebook</span> </a>
-                        <a href="/dummypages/google.html"><img src="/image/google.png" alt=""><span>Google</span> </a>
-                        <a href="/dummypages/twitter.html"><img src="/image/twitter.png" alt=""><span>Twitter</span> </a>
-                    </div>
-                    <div id="box2">
-                        <hr>
-                        <span >  LOGIN WITH SOCIAL OR</span>
-                    </div>
-                    <p>Please enter your e-mail and password:</p>
-                </div>
-        </div>
-    </div>
-<!-- ---------- End above the sign up page content ------- -->
-<!-- ----------start form sign up page content ------- -->
-<div>
-    <div>
-         <div>
-                <form action="">
-                    <div><input id="email" type="text" required="required" placeholder="Enter email"></div>
-                    <div><input id="password" type="password" required="required" placeholder="Enter password"></div>
-                    <button id="first" type="button"  data-action="switch-login-form"><a id="anchor" href="/dummypages/recover.html">Forgot password?</a> </button>
-                    <button id="button">LOGIN</button>
-                    <span>New customer? <a id="anchor" href="/html/signup.html"> Create an account</a></span>
-                </form>
+          <h1>REGISTER</h1>
+          <div>
+            <div id="box1">
+              <a href=""
+                ><img src="/image/facebookico.png" alt="" />
+                <span>Facebook</span>
+              </a>
+              <a href=""
+                ><img src="/image/google.png" alt="" /><span>Google</span>
+              </a>
+              <a href=""
+                ><img src="/image/twitter.png" alt="" /><span>Twitter</span>
+              </a>
             </div>
+            <div id="box2">
+              <hr />
+              <span> LOGIN WITH SOCIAL OR</span>
+            </div>
+            <p>Please fill in the fields below:</p>
+          </div>
+        </div>
+      </div>
+      <!-- ---------- End above the sign up page content ------- -->
+      <!-- ----------start form sign up page content ------- -->
+      <div>
+        <div>
+          <div>
+            <form action="">
+              <div>
+                <input
+                  id="firstName"
+                  type="text"
+                  required="required"
+                  placeholder="First name"
+                />
+              </div>
+              <div>
+                <input
+                  id="lastName"
+                  type="text"
+                  required="required"
+                  placeholder="Last name"
+                />
+              </div>
+              <div>
+                <input
+                  id="email"
+                  type="text"
+                  required="required"
+                  placeholder="Enter email"
+                />
+              </div>
+              <div>
+                <input
+                  id="password"
+                  type="password"
+                  required="required"
+                  placeholder="Enter password"
+                />
+              </div>
+              <button id="button">CREATE ACCOUNT</button>
+              <span
+                >Already have an account?
+                <a id="anchor" href="login.html">Login</a>
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- ---------- End form sign up page content ------- -->
     </div>
-</div>
-<!-- ---------- End form sign up page content ------- -->
-   </div>
-</body>
-<script src="/js/login.js"></script>
+  </body>
+  <script>
+    document.querySelector("#button").addEventListener("click", getData);
+
+    let userData = JSON.parse(localStorage.getItem("signupData")) || [];
+
+    function getData(event) {
+      event.preventDefault();
+      let signupObj = {
+        userFname: document.querySelector("#firstName").value,
+        userLname: document.querySelector("#lastName").value,
+        userEmail: document.querySelector("#email").value,
+        userPassword: document.querySelector("#password").value,
+      };
+      validateDuplicate(signupObj);
+    }
+    let blanck = { userEmail: "", userPassword: "" };
+    function validateDuplicate(elem) {
+      let Data = userData.filter(function (element) {
+        return elem.userEmail !== element.userEmail;
+      });
+      if (
+        blanck.userEmail == elem.userEmail &&
+        blanck.userPassword == elem.userPassword
+      ) {
+        alert("Please fill required field for signup.");
+      } else if (Data.length !== userData.length) {
+        alert("This email id already exist");
+      } else {
+        userData.push(elem);
+        localStorage.setItem("signupData", JSON.stringify(userData));
+        alert("You are successfully signup.");
+        window.location.href = "/index.html";
+      }
+    }
+  </script>
 </html>

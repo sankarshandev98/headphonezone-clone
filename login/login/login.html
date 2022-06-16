@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="http://www.google.com/s2/favicons?domain=https://www.headphonezone.in/"
+    />
+    <title>Account</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #container {
+        line-height: 40px;
+      }
+      #container > div {
+        width: 450px;
+        display: block;
+        margin: auto;
+        margin-top: 80px;
+      }
+      h1 {
+        text-align: center;
+        color: #444444;
+        letter-spacing: -1px;
+        font-weight: bolder;
+        font-size: 32px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #box1 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 35px;
+        gap: 10px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      a {
+        text-align: center;
+        text-decoration: none;
+        box-sizing: border-box;
+        font-weight: 500;
+        color: white;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      a:nth-child(1) {
+        border-radius: 30px;
+        background-color: #3b5999;
+      }
+      a:nth-child(2) {
+        border-radius: 30px;
+        background-color: #4286f5;
+      }
+      a:nth-child(3) {
+        border-radius: 30px;
+        background-color: #00acee;
+      }
+      a > span {
+        position: relative;
+        left: -5px;
+        top: -13px;
+      }
+      a > img {
+        position: relative;
+        left: -19px;
+        height: 35px;
+        border-radius: 20px;
+      }
+
+      #box2 > span {
+        color: #444444;
+        text-align: center;
+        display: table;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0 auto;
+        position: relative;
+        top: -21px;
+        padding: 0 10px;
+        font-weight: 700;
+        background: #ffff;
+        font-size: 14px;
+      }
+      hr {
+        margin-top: 40px;
+      }
+      p {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #444444;
+        font-size: 14px;
+        margin-bottom: -40px;
+      }
+
+      form > div > input {
+        width: 95%;
+        height: 52px;
+        margin-top: 15px;
+        border-radius: 30px;
+        padding-left: 20px;
+        border: 1px solid #e3e3e3;
+        font-size: 15px;
+      }
+
+      button {
+        width: 100%;
+        height: 52px;
+        margin-top: 15px;
+        border-radius: 30px;
+        border: none;
+        background: #3b07ff;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+      }
+      form > span {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 50px;
+        text-align: center;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #8e8891;
+      }
+      /* <-------------------from here css for login page------------------> */
+      #first {
+        width: 30%;
+        color: #8e8891;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        background-color: transparent;
+        position: relative;
+        left: 300px;
+        bottom: 70px;
+        text-decoration: underline;
+      }
+      #first:hover {
+        text-decoration: underline;
+        color: #444444;
+        text-decoration-color: #444444;
+      }
+
+      #anchor {
+        background-color: transparent;
+        color: #8e8891;
+        text-decoration: underline;
+      }
+      #anchor:hover {
+        text-decoration: underline;
+        color: #444444;
+        text-decoration-color: #444444;
+      }
+      /* <--------------- End here css for login page------------------> */
+      @media screen and (min-width: 320px) and (max-width: 480px) {
+        #container > div {
+          width: 230px;
+        }
+        #box1 {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 35px);
+        }
+        button {
+          width: 241px;
+        }
+        #first {
+          position: relative;
+          width: 300px;
+          top: 5px;
+          left: 0px;
+        }
+      }
+
+      @media screen and (min-width: 481px) and (max-width: 700px) {
+        #container > div {
+          width: 350px;
+        }
+        button {
+          width: 355px;
+        }
+        #box1 {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 35px);
+        }
+        #first {
+          position: relative;
+          left: 250px;
+          bottom: 70px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <!-- ----------start above the sign up page content ------- -->
+      <div>
+        <div>
+          <h1>LOGIN</h1>
+          <div>
+            <div id="box1">
+              <a href=""
+                ><img src="/image/facebookico.png" alt="" />
+                <span> Facebook</span>
+              </a>
+              <a href=""
+                ><img src="/image/google.png" alt="" /><span>Google</span>
+              </a>
+              <a href=""
+                ><img src="/image/twitter.png" alt="" /><span>Twitter</span>
+              </a>
+            </div>
+            <div id="box2">
+              <hr />
+              <span> LOGIN WITH SOCIAL OR</span>
+            </div>
+            <p>Please enter your e-mail and password:</p>
+          </div>
+        </div>
+      </div>
+      <!-- ---------- End above the sign up page content ------- -->
+      <!-- ----------start form sign up page content ------- -->
+      <div>
+        <div>
+          <div>
+            <form action="">
+              <div>
+                <input
+                  id="email"
+                  type="text"
+                  required="required"
+                  placeholder="Enter email"
+                />
+              </div>
+              <div>
+                <input
+                  id="password"
+                  type="password"
+                  required="required"
+                  placeholder="Enter password"
+                />
+              </div>
+              <button id="first" type="button" data-action="switch-login-form">
+                <a id="anchor" href="recover.html">Forgot password?</a>
+              </button>
+              <button id="button">LOGIN</button>
+              <span
+                >New customer?
+                <a id="anchor" href="signup.html"> Create an account</a></span
+              >
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- ---------- End form sign up page content ------- -->
+    </div>
+  </body>
+  <script>
+    document.querySelector("#button").addEventListener("click", getData);
+
+    let userData = JSON.parse(localStorage.getItem("signupData"));
+
+    function getData() {
+      let loginEmail = document.querySelector("#email").value;
+      let loginPassword = document.querySelector("#password").value;
+      let count = 0;
+      for (let i = 0; i < userData.length; i++) {
+        if (
+          userData[i].userEmail == loginEmail &&
+          userData[i].userPassword == loginPassword
+        ) {
+          count++;
+        }
+      }
+      if (count === 1) {
+        alert("You are login sucessfully.");
+        window.location.href = "/index.html";
+      } else {
+        alert("Your email or password may wrong.");
+      }
+    }
+  </script>
+</html>
