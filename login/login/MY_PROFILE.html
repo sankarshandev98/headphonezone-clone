@@ -55,8 +55,8 @@
       }
       #right {
         width: 78.2%;
-        height: 355px;
         display: flex;
+        margin-left: 50px;
       }
       button {
         padding: 15px 65px 15px 65px;
@@ -70,12 +70,13 @@
         background-color: #3b0af8;
         cursor: pointer;
         transition: 0.3s all;
+        margin-top: 50px;
       }
       button:hover {
         background-color: #444444;
       }
       #l-sec {
-        width: 15%;
+        width: 35%;
         height: 80%;
       }
       #r-sec {
@@ -99,6 +100,8 @@
         font-size: 20px;
         font-weight: 500;
         font-family: Roboto, sans-serif;
+        margin-top: 50px;
+        margin-left: 30px;
       }
       #log:hover {
         color: #444444;
@@ -118,7 +121,7 @@
   </head>
 
   <body>
-    <h1>HELLO SANKARSHAN</h1>
+    <h1 id="hname"></h1>
     <div id="Container">
       <div id="left">
         <a class="active" href="MY_PROFILE.html">
@@ -163,13 +166,13 @@
         </div>
         <div id="r-sec">
           <div>
-            <h4>Sankarshan</h4>
+            <h4 id="fname">Sankarshan</h4>
           </div>
           <div>
-            <h4>Goswami</h4>
+            <h4 id ="lname">Goswami</h4>
           </div>
           <div>
-            <h4>gsankar164@gmail.com</h4>
+            <h4 id="email">gsankar164@gmail.com</h4>
           </div>
           <div>
             <h4>8556047850</h4>
@@ -181,6 +184,30 @@
       </div>
     </div>
   </body>
+  <script>
+    let data = JSON.parse(localStorage.getItem("signupData"));
+    let loginData = JSON.parse(localStorage.getItem("userLogin"));
+    let fname="";
+    let lname="";
+    let email="";
+    
+   data.forEach(function(elem){
+      if(elem.userEmail===loginData){
+        fname =elem.userFname;
+        lname =elem.userLname;
+        email =loginData;
+      }
+    });
+
+    document.querySelector("#log").addEventListener("click", logOut);
+    function logOut(){
+      window.location.href="\index.html";
+    }
+      document.querySelector("#fname").innerHTML=fname.toUpperCase();
+      document.querySelector("#lname").innerHTML=lname.toUpperCase();
+      document.querySelector("#email").innerHTML=email;
+      document.querySelector("#hname").innerHTML=" HELLO  "+fname.toUpperCase();
+  </script>
 </html>
 
 <script>
