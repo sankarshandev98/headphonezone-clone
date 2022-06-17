@@ -85,7 +85,7 @@
   </head>
 
   <body>
-    <h1>HELLO SANKARSHAN</h1>
+    <h1 id="hname"></h1>
     <div id="Container">
       <div id="left">
         <a href="MY_PROFILE.html">
@@ -119,3 +119,28 @@
     </div>
   </body>
 </html>
+<script>
+  let data = JSON.parse(localStorage.getItem("signupData"));
+  let loginData = JSON.parse(localStorage.getItem("userLogin"));
+  let fname = "";
+  let lname = "";
+  let email = "";
+
+  data.forEach(function (elem) {
+    if (elem.userEmail === loginData) {
+      fname = elem.userFname;
+      lname = elem.userLname;
+      email = loginData;
+    }
+  });
+  let Data = [];
+  document.querySelector("#log").addEventListener("click", logOut);
+  function logOut() {
+    window.location.href = "signup.html";
+    localStorage.setItem("userLogin", JSON.stringify(Data));
+  }
+  document.querySelector("#fname").innerHTML = fname.toUpperCase();
+  document.querySelector("#lname").innerHTML = lname.toUpperCase();
+  document.querySelector("#email").innerHTML = email;
+  document.querySelector("#hname").innerHTML = " HELLO  " + fname.toUpperCase();
+</script>

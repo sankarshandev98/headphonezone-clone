@@ -16,7 +16,7 @@
         display: flex;
         justify-content: space-between;
       }
-      h1 {
+      body > h1 {
         text-align: center;
         color: #444444;
         font-weight: 700;
@@ -43,7 +43,7 @@
         padding-left: 15px;
         letter-spacing: 2px;
         cursor: pointer;
-        transition: .3s all;
+        transition: 0.3s all;
       }
       .active {
         background-color: #444444;
@@ -60,13 +60,101 @@
       #right {
         width: 78.2%;
         height: 355px;
-        border: 1px solid blue;
+        border: 2px solid #e6e6e6;
+        border-radius: 7px;
+        font-family: Roboto,sans-serif;
+      }
+      #first {
+        width: 98%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 15px;
+      }
+      #first>span{
+        font-size: 19px;
+        color: #444444;
+      }
+      #first>span:first-child{
+        padding-bottom: 20px;
+      }
+      #second {
+        width: 98%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        color: #444444;
+        font-size: 18px;
+      }
+      #third {
+        width: 98%;
+        height: 120px;
+        display: flex;
+        border: 2px solid #e6e6e6;
+        border-radius: 7px;
+        margin: auto;
+      }
+      #forth {
+        width: 98%;
+        display: flex;
+        gap: 15px;
+        justify-content: end;
+        margin-top: 9px;
+      }
+      #third > div:first-child {
+        width: 100px;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        width: 79px;
+        height: 79px;
+      }
+      #ptag>p:nth-child(1){
+        color: #3c07ff;
+        margin: 10px 0px -10px ;
+        font-size: 20px;
+      }
+      #ptag>p:nth-child(3){
+        margin: -10px 0px -10px ;
+        color: #444444;
+        font-size: 18px;
+      }
+      #ptag>p:nth-child(2){
+        color: #444444;
+        font-size: 18px;
+      }
+      #ptag>p:nth-child(4){
+        color: #444444;
+        font-size: 18px;
+      }
+      hr{
+        border: 1px solid #e6e6e6;
+        width: 98%;
+      }
+      button{
+        color: #3c07ff;
+        background-color: white;
+        padding: 20px;
+        border: 2px solid #3c07ff;
+        border-radius: 100px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      button:hover{
+        background-color: #3c07ff;
+        color: white;
+        transition-delay: 0.5ms;
       }
     </style>
   </head>
 
   <body>
-    <h1>HELLO SANKARSHAN</h1>
+    <h1 id="hname"></h1>
     <div id="Container">
       <div id="left">
         <a href="MY_PROFILE.html">
@@ -91,7 +179,68 @@
           <p>CHANGE PASSWORD</p>
         </a>
       </div>
-      <div id="right"></div>
+      <div id="right">
+        <div id="first">
+          <span>Order: #77221 Returned</span>
+          <span>Grand Total:₹ 849</span>
+        </div>
+        <hr>
+        <div id="second">
+          <div>
+            <span>Date: March 25 2018</h4>
+            <p>Fulfillment Status: Fulfilled</p>
+          </div>
+          <div>
+            <span>Total Items: 1</span>
+            <p>Payment: Pending</p>
+          </div>
+        </div>
+        <div id="third">
+          <div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-JBL-Quantum100-Black-03_700x.jpg?v=1620459914"
+              alt=""
+            />
+          </div>
+          <div id="ptag">
+            <p>1MORE - Piston Fit - Titanium</p>
+            <p>₹ 849</p>
+            <p>Tracking Number</p>
+            <p>Unavailable</p>
+          </div>
+        </div>
+        <div id="forth">
+          <button>RETURN ORDER</button>
+          <button>TRACK ORDER</button>
+          <button>SHOW ORDER DETAILS</button>
+          <button>DOWNLOAD INVOICE</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
+<script>
+  let data = JSON.parse(localStorage.getItem("signupData"));
+  let loginData = JSON.parse(localStorage.getItem("userLogin"));
+  let fname = "";
+  let lname = "";
+  let email = "";
+
+  data.forEach(function (elem) {
+    if (elem.userEmail === loginData) {
+      fname = elem.userFname;
+      lname = elem.userLname;
+      email = loginData;
+    }
+  });
+  let Data = [];
+  document.querySelector("#log").addEventListener("click", logOut);
+  function logOut() {
+    window.location.href = "signup.html";
+    localStorage.setItem("userLogin", JSON.stringify(Data));
+  }
+  document.querySelector("#fname").innerHTML = fname.toUpperCase();
+  document.querySelector("#lname").innerHTML = lname.toUpperCase();
+  document.querySelector("#email").innerHTML = email;
+  document.querySelector("#hname").innerHTML = " HELLO  " + fname.toUpperCase();
+</script>
