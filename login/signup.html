@@ -282,7 +282,6 @@
     let userData = JSON.parse(localStorage.getItem("signupData")) || [];
 
     function getData(event) {
-      event.preventDefault();
       let signupObj = {
         userFname: document.querySelector("#firstName").value,
         userLname: document.querySelector("#lastName").value,

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="http://www.google.com/s2/favicons?domain=https://www.headphonezone.in/"
+    />
     <title></title>
     <style>
       #Container {
@@ -166,52 +170,48 @@
         </div>
         <div id="r-sec">
           <div>
-            <h4 id="fname">Sankarshan</h4>
+            <h4 id="fname"></h4>
           </div>
           <div>
-            <h4 id ="lname">Goswami</h4>
+            <h4 id="lname"></h4>
           </div>
           <div>
-            <h4 id="email">gsankar164@gmail.com</h4>
+            <h4 id="email"></h4>
           </div>
           <div>
             <h4>8556047850</h4>
           </div>
           <div>
-            <p id="log">Logout</p>
+            <button id="log">Logout</button>
           </div>
         </div>
       </div>
     </div>
   </body>
-  <script>
-    let data = JSON.parse(localStorage.getItem("signupData"));
-    let loginData = JSON.parse(localStorage.getItem("userLogin"));
-    let fname="";
-    let lname="";
-    let email="";
-    
-   data.forEach(function(elem){
-      if(elem.userEmail===loginData){
-        fname =elem.userFname;
-        lname =elem.userLname;
-        email =loginData;
-      }
-    });
-
-    document.querySelector("#log").addEventListener("click", logOut);
-    function logOut(){
-      window.location.href="\index.html";
-    }
-      document.querySelector("#fname").innerHTML=fname.toUpperCase();
-      document.querySelector("#lname").innerHTML=lname.toUpperCase();
-      document.querySelector("#email").innerHTML=email;
-      document.querySelector("#hname").innerHTML=" HELLO  "+fname.toUpperCase();
-  </script>
 </html>
 
 <script>
-  let userData=JSON.parse(localStorage.getItem('signupData'));
-  
-  
+  let data = JSON.parse(localStorage.getItem("signupData"));
+  let loginData = JSON.parse(localStorage.getItem("userLogin"));
+  let fname = "";
+  let lname = "";
+  let email = "";
+
+  data.forEach(function (elem) {
+    if (elem.userEmail === loginData) {
+      fname = elem.userFname;
+      lname = elem.userLname;
+      email = loginData;
+    }
+  });
+  let Data = [];
+  document.querySelector("#log").addEventListener("click", logOut);
+  function logOut() {
+    window.location.href = "signup.html";
+    localStorage.setItem("userLogin", JSON.stringify(Data));
+  }
+  document.querySelector("#fname").innerHTML = fname.toUpperCase();
+  document.querySelector("#lname").innerHTML = lname.toUpperCase();
+  document.querySelector("#email").innerHTML = email;
+  document.querySelector("#hname").innerHTML = " HELLO  " + fname.toUpperCase();
 </script>
