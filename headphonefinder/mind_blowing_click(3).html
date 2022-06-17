@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headphone Finder 2</title>
+    <link rel="shotcut icon" type="image/png" href="logo.png">
+    <style>
+        /* Heading Section */
+        #head{
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+        #head > h1{
+            color: rgb(63, 63, 63);
+            text-align: center;
+            font-weight: 600;
+            font-size: 70px;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+        #head > h1+h2{
+            text-align: center;
+            font-weight: 400;
+            font-size: 30px;
+            font-style: italic;
+            margin-top: -10px;
+        }
+        #head > h1+h2+p{
+            text-align: center;
+            font-weight: 400;
+            font-size: 26px;
+            margin-top: -10px;
+        }
+
+        /* Body content here  */
+        #cards{
+            width: 60%;
+            margin: auto;
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+            margin-top: 90px;
+        }
+        #cards > div{
+            border: 1px solid black;
+            width: 48%;
+            text-align: center;
+            font-weight: 400;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #cards > div:hover{
+            background-color: rgb(68, 65, 65);
+            color: white;
+            transform: translateY(-10px);
+        }
+        #cards > div > img+p{
+            font-size: xx-large;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        #cards > div > p+p{
+            font-size: x-large;
+            margin-bottom: 45px;
+        }
+        #cards > div > img{
+            width: 80%;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            margin-top: 65px;
+        }
+    </style>
+</head>
+<body>
+    <div id="head">
+        <h1>What Do You Prefer While Listening?</h1>
+        <h2>Why do we ask?</h2>
+        <p>Headphones come in different shapes and sizes. Pick what's most comfortable to you.</p>
+    </div>
+    <div id="cards">
+        <div id="item-1" name="item-1">
+            <img src="https://d33x1o3gj9io8i.cloudfront.net/images/550/Vx8oZu4nQCip7ZJYITGG" alt="error">
+            <p>EARPHONES & IEMS</p>
+            <p>In-Ear headphones for maximum portability & noise isolation </p>
+        </div>
+        <div id="item-2" name="item-2">
+            <img src="https://d33x1o3gj9io8i.cloudfront.net/images/550/rKx5XU0QOWMhzwvNx7fN" alt="error">
+            <p>HEADPHONES</p>
+            <p>Over-Ear headphones for maximum comfort & immersive sound.</p>
+        </div>
+    </div> 
+</body>
+</html>
+<script>
+    document.getElementById('item-1').addEventListener('click',goto)
+    function goto(){
+        window.location.href="mind_blowing_click(4).html";
+    }
+</script>

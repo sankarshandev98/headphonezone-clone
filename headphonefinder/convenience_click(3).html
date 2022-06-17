@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headphone Finder 2</title>
+    <link rel="shotcut icon" type="image/png" href="logo.png">
+    <style>
+        /* Heading Section */
+         #head{
+            width: 80%;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            letter-spacing: 1px;
+            line-height: 1.2;
+
+        }
+        #head > h1{
+            color: rgb(63, 63, 63);
+            text-align: center;
+            font-weight: 600;
+            font-size: 70px;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+        #head > h1+h2{
+            text-align: center;
+            font-weight: 400;
+            font-size: 30px;
+            font-style: italic;
+            margin-top: -10px;
+        }
+        #head > h1+h2+p{
+            text-align: center;
+            font-weight: 400;
+            font-size: 26px;
+            margin-top: -10px;
+        }
+        /*  option cards starts from here */
+        #options{
+            width: 80%;
+            margin: auto;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+            display:flex;
+        }
+        #options > div{
+            width: 15%;
+            border: transparent;
+            text-align: center;
+            font: 600;
+            font-size: 30px;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        #options> div:hover{
+            background-color: white;
+            transform: translateY(-10px);
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 5px;
+        }
+        #options > div > img{
+            width: 70%;
+        }
+        /* medium */
+        @media all and (min-width:400px) and (max-width:720px){
+            #options{
+                align-items: center;
+                justify-content: center;
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: repeat(2,auto);
+                width: 90%;
+            }
+            #options > div{
+                width: 70%;
+        }
+    }   
+    /* small */
+        @media all and (min-width:100px) and (max-width:399px){
+            #options{
+                align-items: center;
+                justify-content: center;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(3,auto);
+                width: 90%;
+            }
+            #options > div{
+                width: 70%;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <div id="head">
+        <h1>What are You Planning on Using Your Headphones for?</h1>
+        <h2>Why do we ask?</h2>
+        <p>When it comes to convenience, specialists are always better, so pick ONE.</p>
+    </div>
+    <div id="options">
+            <div>
+            <img src="https://d33x1o3gj9io8i.cloudfront.net/images/550/GWg0hMkQS0m8Ckl9XYlK" alt="error">
+            <p>Calls</p>
+            </div>
+            <div>
+                <img src="https://d33x1o3gj9io8i.cloudfront.net/images/550/49MI1p3Ri6FNFOWf0KAS" alt="error">
+                <p>Sports & Gym</p>
+            </div>
+            <div>
+                <img src="https://d33x1o3gj9io8i.cloudfront.net/images/550/09lXIfhPRGeeYrNhqajV" alt="error">
+                <p>Travel</p>
+            </div>
+            <div>
+                <img src="https://d33x1o3gj9io8i.cloudfront.net/images/550/4rzsw0LOSW2y5AxfwWjw" alt="error">
+                <p>Movies & TV</p>
+            </div>
+            <div>
+                <img src="https://d33x1o3gj9io8i.cloudfront.net/images/550/m3qEAimRJmOeUpwp5rsy" alt="error">
+                <p>Gaming</p>
+            </div>
+            <div>
+                <img src="https://d33x1o3gj9io8i.cloudfront.net/images/550/VydWYxFQFmGJdr61w4QM" alt="error">
+                <p>Bit of Everything</p>
+            </div>
+    </div>
+</body>
+</html>
+<script>
+     document.getElementById('options').addEventListener('click',goto);
+    function goto(){
+        window.location.href="master_pricerange_page.html";
+    }
+</script>
