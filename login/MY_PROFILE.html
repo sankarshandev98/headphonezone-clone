@@ -21,7 +21,7 @@
         color: #444444;
         font-weight: 700;
         letter-spacing: 1px;
-        font-family: Zurich;
+        font-family: Roboto, sans-serif;
         margin-bottom: 45px;
         margin-top: 45px;
       }
@@ -204,11 +204,10 @@
       email = loginData;
     }
   });
-  let Data = [];
+
   document.querySelector("#log").addEventListener("click", logOut);
   function logOut() {
     window.location.href = "signup.html";
-    localStorage.setItem("userLogin", JSON.stringify(Data));
   }
   document.querySelector("#fname").innerHTML = fname.toUpperCase();
   document.querySelector("#lname").innerHTML = lname.toUpperCase();
