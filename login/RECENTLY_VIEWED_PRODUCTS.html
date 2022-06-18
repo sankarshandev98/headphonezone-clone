@@ -43,7 +43,7 @@
         padding-left: 15px;
         letter-spacing: 2px;
         cursor: pointer;
-        transition: .3s all;
+        transition: 0.3s all;
       }
       .active {
         background-color: #444444;
@@ -59,12 +59,69 @@
       }
       #right {
         width: 78.2%;
-        height: 355px;
-        border: 1px solid blue;
+        display: grid;
+        grid-template-columns: repeat(3, 378px);
+        gap: 15px;
+        grid-template-rows: auto;
       }
-      img{
-        width: 100%;
-        height: 100%;
+      #right > div {
+        border: 1px solid #e6e6e6;
+        height: 440px;
+        border-radius: 8px;
+      }
+
+      #image > img {
+        width: 100px;
+        height: 100px;
+        margin-left: 35%;
+        margin-bottom: 35px;
+        margin-top: 10px;
+      }
+      img + div {
+        width: 95%;
+        height: 45px;
+        margin: auto;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid #e6e6e6;
+      }
+      #counter {
+        display: flex;
+        width: 95%;
+        height: 45px;
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 15px;
+      }
+      #counter > button {
+        width: 40px;
+        height: 45px;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #e6e6e6;
+        cursor: pointer;
+      }
+      #counter + p {
+        text-align: center;
+      }
+      #atc {
+        padding: 20px 123px;
+        border-radius: 100px;
+        background-color: #3b0af8;
+        border: none;
+        color: white;
+        cursor: pointer;
+        margin-left: 3px;
+        font-family: Roboto, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      #atc:hover {
+        background-color: #444444;
       }
     </style>
   </head>
@@ -96,6 +153,27 @@
         </a>
       </div>
       <div id="right">
+        <div id="image">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-JBL-Quantum100-Black-03_700x.jpg?v=1620459914"
+            alt=""
+          />
+          <div>
+            <p>Gift Wrap Your Order</p>
+          </div>
+          <div id="counter">
+            <button><img src="/image/addition (1).png" alt="" /></button>
+            <p>1</p>
+            <button><img src="/image/minus.png" alt="" /></button>
+          </div>
+          <p>₹ 50</p>
+          <button id="atc">ADD TO CART</button>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     </div>
   </body>
