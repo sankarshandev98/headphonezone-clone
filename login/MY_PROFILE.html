@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="http://www.google.com/s2/favicons?domain=https://www.headphonezone.in/"
+    />
+    <title></title>
+    <style>
+      #Container {
+        width: 85.5%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      h1 {
+        text-align: center;
+        color: #444444;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-family: Roboto, sans-serif;
+        margin-bottom: 45px;
+        margin-top: 45px;
+      }
+      #left {
+        width: 318px;
+        height: 355px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #e6e6e6;
+      }
+      a {
+        text-decoration: none;
+        background-color: #e6e6e6;
+        font-size: 15px;
+        font-family: Roboto, sans-serif;
+        font-weight: bold;
+        color: black;
+        padding-left: 15px;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: 0.3s all;
+      }
+      .active {
+        background-color: #444444;
+        color: white;
+      }
+      #left > a:last-child {
+        margin-bottom: 40px;
+        border-radius: 0px 0px 5px 7px;
+      }
+      #left > a:hover {
+        background-color: #444444;
+        color: white;
+      }
+      #right {
+        width: 78.2%;
+        display: flex;
+        margin-left: 50px;
+      }
+      button {
+        padding: 15px 65px 15px 65px;
+        border: transparent;
+        font-size: 19px;
+        font-family: Roboto, sans-serif;
+        border-radius: 100px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: white;
+        background-color: #3b0af8;
+        cursor: pointer;
+        transition: 0.3s all;
+        margin-top: 50px;
+      }
+      button:hover {
+        background-color: #444444;
+      }
+      #l-sec {
+        width: 35%;
+        height: 80%;
+      }
+      #r-sec {
+        width: 65%;
+        height: 80%;
+        margin-left: 14px;
+      }
+      #l-sec > div {
+        display: flex;
+        align-items: center;
+        height: 50px;
+      }
+      #r-sec > div {
+        display: flex;
+        align-items: center;
+        height: 50px;
+      }
+      #log {
+        color: #3b0af8;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 500;
+        font-family: Roboto, sans-serif;
+        margin-top: 50px;
+      }
+      #log:hover {
+        color: #444444;
+      }
+      #l-sec > div > p {
+        font-size: 20px;
+        font-weight: 500;
+        color: #444444;
+        font-family: Roboto, sans-serif;
+      }
+      #r-sec > div > h4 {
+        font-family: Roboto, sans-serif;
+        color: #444444;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="hname"></h1>
+    <div id="Container">
+      <div id="left">
+        <a class="active" href="MY_PROFILE.html">
+          <p>MY PROFILE</p>
+        </a>
+        <a href="MY_ORDERS.html">
+          <p>MY ORDERS</p>
+        </a>
+        <a href="CLUB_AUDIOPHILE_REWARDS.html">
+          <p>CLUB AUDIOPHILE REWARDS</p>
+        </a>
+        <a href="CONTACT_US.html">
+          <p>CONTACT US</p>
+        </a>
+        <a href="DELIVERY_ADDRESS.html">
+          <p>DELIVERY ADDRESS</p>
+        </a>
+        <a href="RECENTLY_VIEWED_PRODUCTS.html">
+          <p>RECENTLY VIEWED PRODUCTS</p>
+        </a>
+        <a href="CHANGE PASSWORD.html">
+          <p>CHANGE PASSWORD</p>
+        </a>
+      </div>
+      <div id="right">
+        <div id="l-sec">
+          <div>
+            <p>First Name :</p>
+          </div>
+          <div>
+            <p>Last Name :</p>
+          </div>
+          <div>
+            <p>Email :</p>
+          </div>
+          <div>
+            <p>Contact Number :</p>
+          </div>
+          <div>
+            <button>EDIT</button>
+          </div>
+        </div>
+        <div id="r-sec">
+          <div>
+            <h4 id="fname"></h4>
+          </div>
+          <div>
+            <h4 id="lname"></h4>
+          </div>
+          <div>
+            <h4 id="email"></h4>
+          </div>
+          <div>
+            <h4>8556047850</h4>
+          </div>
+          <div>
+            <p id="log">Logout</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  let data = JSON.parse(localStorage.getItem("signupData"));
+  let loginData = JSON.parse(localStorage.getItem("userLogin"));
+  let fname = "";
+  let lname = "";
+  let email = "";
+
+  data.forEach(function (elem) {
+    if (elem.userEmail === loginData) {
+      fname = elem.userFname;
+      lname = elem.userLname;
+      email = loginData;
+    }
+  });
+
+  document.querySelector("#log").addEventListener("click", logOut);
+  function logOut() {
+    window.location.href = "signup.html";
+  }
+  document.querySelector("#fname").innerHTML = fname.toUpperCase();
+  document.querySelector("#lname").innerHTML = lname.toUpperCase();
+  document.querySelector("#email").innerHTML = email;
+  document.querySelector("#hname").innerHTML = " HELLO  " + fname.toUpperCase();
+</script>
