@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="http://www.google.com/s2/favicons?domain=https://www.headphonezone.in/"
+    />
+    <title></title>
+    <style>
+      #Container {
+        width: 85.5%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      body > h1 {
+        text-align: center;
+        color: #444444;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-family: Roboto, sans-serif;
+        margin-bottom: 45px;
+        margin-top: 45px;
+      }
+      #left {
+        width: 318px;
+        height: 355px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #e6e6e6;
+      }
+      a {
+        text-decoration: none;
+        background-color: #e6e6e6;
+        font-size: 15px;
+        font-family: Roboto, sans-serif;
+        font-weight: bold;
+        color: black;
+        padding-left: 15px;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: 0.3s all;
+      }
+      .active {
+        background-color: #444444;
+        color: white;
+      }
+      #left > a:last-child {
+        margin-bottom: 40px;
+        border-radius: 0px 0px 5px 7px;
+      }
+      #left > a:hover {
+        background-color: #444444;
+        color: white;
+      }
+      #right {
+        width: 78.2%;
+        margin-left: 20px;
+        height: 355px;
+        border: 2px solid #e6e6e6;
+        border-radius: 7px;
+        font-family: Roboto,sans-serif;
+      }
+      #first {
+        width: 98%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 15px;
+      }
+      #first>span{
+        font-size: 19px;
+        color: #444444;
+      }
+      #first>span:first-child{
+        padding-bottom: 20px;
+      }
+      #second {
+        width: 98%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        color: #444444;
+        font-size: 18px;
+      }
+      #third {
+        width: 98%;
+        height: 120px;
+        display: flex;
+        border: 2px solid #e6e6e6;
+        border-radius: 7px;
+        margin: auto;
+      }
+      #forth {
+        width: 98%;
+        display: flex;
+        gap: 15px;
+        justify-content: end;
+        margin-top: 9px;
+      }
+      #third > div:first-child {
+        width: 100px;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        width: 79px;
+        height: 79px;
+      }
+      #ptag>p:nth-child(1){
+        color: #3c07ff;
+        margin: 10px 0px -10px ;
+        font-size: 20px;
+      }
+      #ptag>p:nth-child(3){
+        margin: -10px 0px -10px ;
+        color: #444444;
+        font-size: 18px;
+      }
+      #ptag>p:nth-child(2){
+        color: #444444;
+        font-size: 18px;
+      }
+      #ptag>p:nth-child(4){
+        color: #444444;
+        font-size: 18px;
+      }
+      hr{
+        border: 1px solid #e6e6e6;
+        width: 98%;
+      }
+      button{
+        color: #3c07ff;
+        background-color: white;
+        padding: 20px;
+        border: 2px solid #3c07ff;
+        border-radius: 100px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      button:hover{
+        background-color: #3c07ff;
+        color: white;
+        transition-delay: 0.5ms;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="hname"></h1>
+    <div id="Container">
+      <div id="left">
+        <a href="MY_PROFILE.html">
+          <p>MY PROFILE</p>
+        </a>
+        <a class="active" href="MY_ORDERS.html">
+          <p>MY ORDERS</p>
+        </a>
+        <a href="CLUB_AUDIOPHILE_REWARDS.html">
+          <p>CLUB AUDIOPHILE REWARDS</p>
+        </a>
+        <a href="CONTACT_US.html">
+          <p>CONTACT US</p>
+        </a>
+        <a href="DELIVERY_ADDRESS.html">
+          <p>DELIVERY ADDRESS</p>
+        </a>
+        <a href="RECENTLY_VIEWED_PRODUCTS.html">
+          <p>RECENTLY VIEWED PRODUCTS</p>
+        </a>
+        <a href="CHANGE PASSWORD.html">
+          <p>CHANGE PASSWORD</p>
+        </a>
+      </div>
+      <div id="right">
+        <div id="first">
+          <span>Order: #77221 Placed</span>
+          <span>Grand Total:₹ 999</span>
+        </div>
+        <hr>
+        <div id="second">
+          <div>
+            <span>Date: March 25 2018</h4>
+            <p>Fulfillment Status: Fulfilled</p>
+          </div>
+          <div>
+            <span>Total Items: 1</span>
+            <p>Payment: Pending</p>
+          </div>
+        </div>
+        <div id="third">
+          <div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-KZ-EDX-Pro-crystal-01_459c4189-ee97-4c56-8b95-f9e8b1c6f00a_500x.jpg?v=1634125156"
+              alt=""
+            />
+          </div>
+          <div id="ptag">
+            <p>KZ - EDX PRO</p>
+            <p>₹ 999</p>
+            <p>Tracking Number</p>
+            <p>8945722865</p>
+          </div>
+        </div>
+        <div id="forth">
+          <button>RETURN ORDER</button>
+          <button>TRACK ORDER</button>
+          <button id="a">SHOW ORDER DETAILS</button>
+          <button>DOWNLOAD INVOICE</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let data = JSON.parse(localStorage.getItem("signupData"));
+  let fname = "";
+  data.forEach(function (elem) {
+    fname = elem.userFname;
+    document.querySelector("#hname").innerHTML = " HELLO  " + fname.toUpperCase();
+  });
+</script>
