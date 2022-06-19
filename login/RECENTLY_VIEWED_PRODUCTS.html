@@ -60,13 +60,13 @@
       #right {
         width: 78.2%;
         display: grid;
-        grid-template-columns: repeat(3, 378px);
+        grid-template-columns: repeat(3, 350px);
         gap: 15px;
         grid-template-rows: auto;
       }
       #right > div {
         border: 1px solid #e6e6e6;
-        height: 440px;
+        height: 390px;
         border-radius: 8px;
       }
 
@@ -77,9 +77,12 @@
         margin-bottom: 35px;
         margin-top: 10px;
       }
+      #image{
+        margin-left: 20px;
+      }
       img + div {
         width: 95%;
-        height: 45px;
+        height: 55px;
         margin: auto;
         text-align: center;
         border-radius: 5px;
@@ -109,7 +112,7 @@
         text-align: center;
       }
       #atc {
-        padding: 20px 123px;
+        padding: 20px 109px;
         border-radius: 100px;
         background-color: #3b0af8;
         border: none;
@@ -117,11 +120,16 @@
         cursor: pointer;
         margin-left: 3px;
         font-family: Roboto, sans-serif;
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 600;
       }
       #atc:hover {
         background-color: #444444;
+      }
+      #pro{
+        cursor: pointer;
+        font-family: Roboto, sans-serif;
+        font-size: 18px;
       }
     </style>
   </head>
@@ -155,25 +163,20 @@
       <div id="right">
         <div id="image">
           <img
-            src="https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-JBL-Quantum100-Black-03_700x.jpg?v=1620459914"
+            src="https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-KZ-EDX-Pro-crystal-01_459c4189-ee97-4c56-8b95-f9e8b1c6f00a_500x.jpg?v=1634125156",
             alt=""
           />
           <div>
-            <p>Gift Wrap Your Order</p>
+            <p id="pro">Add more products</a></p>
           </div>
           <div id="counter">
             <button><img src="/image/addition (1).png" alt="" /></button>
             <p>1</p>
             <button><img src="/image/minus.png" alt="" /></button>
           </div>
-          <p>₹ 50</p>
+          <p>₹ 999</p>
           <button id="atc">ADD TO CART</button>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
       </div>
     </div>
   </body>
@@ -186,4 +189,8 @@
     document.querySelector("#hname").innerHTML =
       " HELLO  " + fname.toUpperCase();
   });
+  document.querySelector('#pro').addEventListener('click',prom);
+  function prom(){
+    window.location.href='product_page.html';
+  }
 </script>
