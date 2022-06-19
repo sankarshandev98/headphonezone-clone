@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Headphone Finder 2</title>
-    <link rel="shotcut icon" type="image/png" href="logo.png">
-    <style>
-        #logo{
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            justify-content: center;
-        }
-        h1{
-         width:85%;
-         font-size: 42px;
+    <link rel="shotcut icon" type="image/png" href="logo.png" />
+    <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=i5BgtLcf_z_OjO0SAXB79rLkbfbGnlAlCE6-i6BzorBbW6SH9QJL8xfJoaVZj4zgBnzaBZpz7v79pTXGtojRtyXk5WfjWhcdu9ok9GxtsKkpXx9dVG9s-t9em88hmHcLqd4PoYMEGdp1hr1flv0PJjLnkNmBclSUIhEi_i1AzYroKIViUM1DREAkdlCO8Cal8_79LS44ymQ7uciTXWc6aVsFAjpvuygxYvh-v8FnJ-vCn1vKDSJCYJo08TzpifwGckol0DgwQl0wlQH2f1E--2P1aSSr2tQABh8a0T-AC1W2ViyL9vpaGMKD9S-Xnm4e9H3cWdE9Ma8stAWdEIV68czwk9XLrQyhhb86QSSmBQs2C_C5uPKyoSoUIPpGPhJAIpM_gt3N8jJeO_JXRaSxyX7YJIsEL9_tbyWdLDoNTWQBiIbYU7PRlxpCyiDSlLr6Vm2Ob1N2kUp51W29nIC1Lw7i1K-6RM8c-i9myspY9QNDEEnycv1eiGAeVAfSVAuHn0IbiBfd6HQQBZNx8iBl1wcqcZRGSOuh6Kl5xiVrl63JucP4v_Wj6X0nQB5Mz5-eXjgG2-x69Rk1GbBWTj2NOan9v5Nt2v32TcEyhTc_AW_ViKC24lJrEBlt6UoSqriF25JYnDldL9IRyLJzcFT90tdARaR3XGrvV492gP-g5T40g9RjM4SaajdRKMfLFgClF69MM5iVZQFftDkt5i5tAwGqTcJ9gTBKRo7bX1cwCCfwtkL6tzrakG6aatpF6kolIn84YrQievj7RkY2hNawFbq1eSGiEQ1G81chV1V1-lstic39tU80AT_goTDS7GPBxtrqeftcKUzuhB7BOkNn3WIaCNOoO1_cTp3dyM3KXs0am7jU6FO3gWguJfBwR_iuOJK1QHFtKcm1pZIx55ZZLkKaFmgCK9i31dVw7w8uquBFI3x89qxPobfc48AhVK2dl7PyPF2rNRF6A6IqOE_6Bvdy097cRSGo46VxeXA9yiA2bZO4kYMAqjrTuvSa2Jc633E9eVwtb4E5mymL9saHjTbAB8yIuL1KuB7M-vrXdqM-0TnbaDKN_Pu_fgbVlwZ4TwLwhlWkBdUjnnZ3nF7ifGuf5Y6Ago-a-nQAup9JIHgEQrFmhgdP2BhER7s9Rp41m65GZmYAry-Mwoh-11w8l33_KM2KOvslKoNu0UvEGlrGbC4D5navErNtvy-Wke3IwF1DVld0256XgZHpo79GiTTjl2UOa1PqjZddwGn_xZ7PaUotcoYaF7dtZUSioTTdNslfhHzwC5eBVB2jjHH14NzUJWEZPbmLpB1PD0t7-cLSUBF6Otzn_BKkl6ej58q3MEvviSrRkwBWYI3U64fLIQ" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9kb2MtMGstNm8tZG9jcy5nb29nbGV1c2VyY29udGVudC5jb20vZG9jcy9zZWN1cmVzYy9odnI3cGw4Z2ZkbHJzNWI2cmptdXNjZnZsajVqY3A4OC9vZ2F2N2doZDdoc2dxMGlpZGs0dm03cHNjOGdoZ2JpZy8xNjU1NjQ2NDUwMDAwLzA0MzM4MjY5NzQzNTA2NTE5ODQ3LzE3NjkxNjk5Njc5OTkyMTkxNzQzLzFzYWlQSXpGNFR0TWRqclNfMmlJdkVwTFRERU5hdnZ3bz9lPWRvd25sb2FkJmF4PUFDeEVBc2JJTjVVSDlUb0d2cjNMV2dEbG9lVTdFQ1JTNURrSThlM245U1VjelczdHQ2Ti05Y1pER0x5TjBydGpsdF9GY255YWViWXp2WWdVVmZ2dVluSmR2a2V0b0xrTUMyYWV2dE1VTGlKN0o4SjJWZUoyNGs0RkJYUHJaQ2gzR0dfaXR5ZlpqNHBxM3VmRzVZU0RFYUhLd3dCZ2FoUlF4Y1RfNkR6UUtQY282SVRvOE9VMlNFNVlDUmRXWnZTcEI4TjNOWlVaZGttNU1McDlfR09URXlSOG4wUTlCOHhlWlJfV2RZaDYtTi1OeDZvbzRYY2pNVzVNMWlpZXk3alU5TnlyZExZR2dXMHoyenNxd0dwT0hQajVOU2g1aFFtMWxBanJUVlVpMTNucnN6bEtZLVZRSS1uY1dLTFRweFhjaVZlcV9lTUdkZVJOUHZhVmw0eVNPTFdsTGJ1TlVBVmRraG9rWWtYLWhmQV9PWGxSalYtTWJUQmFwMEJqWXRuZVZzbzZZLW8zM2w5ZFQ1LUNrdGxEbm44Y0lYeFYwb3R6em5KMkdRVVZYelo2ZzZKeEJiT1E5NHVXVGwyMDJlaEZLMmtwQlZORzdsR2ZpTDBrZlpLLXltSDhySF9wZk1qSUFxcXV6NjVtUVF0S1BvQUFMLVYzeGpSOTRmbnNRbUQ1dFZ2YTJLcnI1Q1NZRENZMFY5MkM3c1NkRFJ5bU5xRHRYdnFuaC1fX0s1VW1EdFF1d0FRRmhoVFlaeXFGZ0diYnNkSGVPbWlNZ3o1M2h1cUFfeDVPMk9oeFladU5mNGd0MTBMSmZqbi1kNWUyb1JSNkdJRHNkNHBadm8yajNyLUJoalVPVGJjRzNFeVJMRlVPSXpWdVNUaEFkcFlORWNiQ1U2Tl9BT016dDdWN0NhS25kYzZTUjBhV192b3VpMmxmV0p1TTJDSElSa1U3SmhuakxHTHB0QnIxdWk3MzUySjVtTnJXWHJkQ0IwREdRYW1WUTZHVlc4ZUImYXV0aHVzZXI9MA"/><style>
+      #logo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+      }
+      h1 {
+        width: 85%;
+        font-size: 42px;
         font-weight: 600;
         letter-spacing: 2px;
         color: rgb(68, 68, 68);
@@ -24,84 +24,90 @@
         align-items: center;
         margin-bottom: 20px;
         margin-top: 70px;
+      }
+      #btn {
+        border: 1px solid rgb(60, 7green, 255blue);
+        color: white;
+        font-size: 18px;
+        letter-spacing: 2px;
+        border-radius: 10px;
+        background-color: rgb(60, 7, 255);
+        padding: 16px;
+        border-radius: 50px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        cursor: pointer;
+        border-color: transparent;
+        margin-top: 20px;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+      }
+      #btn:hover {
+        background-color: white;
+        color: rgb(60, 7, 255);
+        border-color: rgb(60, 7, 255);
+      }
+      #content {
+        width: 85%;
+        font-weight: 400;
+        line-height: 1.5;
+        font-size: 22px;
+        color: rgb(68, 68, 68);
+        margin: auto;
+        text-align: left;
+        align-items: center;
+      }
+      #logo > img {
+        width: 90%;
+      }
+      @media all and (min-width: 100px) and (max-width: 820px) {
+        #logo {
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(2, auto);
         }
-        #btn{
-            border: 1px solid rgb(60, 7green, 255blue);
-            color: white;
-            font-size: 18px;;
-            letter-spacing: 2px;
-            border-radius: 10px;
-            background-color: rgb(60, 7, 255);
-            padding: 16px;
-            border-radius: 50px;
-            letter-spacing: 2px;
-            font-weight: 600;
-            cursor: pointer;
-            border-color:transparent;
-            margin-top: 20px;
-            margin: auto;
-            text-align: center;
-            align-items: center;
+        h1 {
+          font-size: 35px;
         }
-        #btn:hover{
-                background-color: white;
-                color:rgb(60, 7, 255); 
-                border-color: rgb(60, 7, 255); 
+        #content {
+          font-size: 18px;
         }
-        #content{
-            width: 85%;
-            font-weight: 400;
-            line-height: 1.5;
-            font-size: 22px;
-            color: rgb(68, 68, 68);
-            margin: auto;
-            text-align: left;
-            align-items: center;
+        #btn {
+          font-size: 15px;
         }
-        #logo>img{
-            width: 90%;
-        }
-        @media all and (min-width:100px) and (max-width:820px){
-            #logo{
-                grid-template-columns: repeat(1,1fr);
-                grid-template-rows: repeat(2,auto);
-            }
-            h1{
-                font-size: 35px;
-            }
-            #content{
-                font-size: 18px;
-            }
-            #btn{
-                font-size: 15px;
-        }
-    }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <div id="logo">
-            <img src="https://d33x1o3gj9io8i.cloudfront.net/images/550/lg_48SNi1u0Rg2PAYzsx3bc">
-            <div>
-                <h1>
-                    WELCOME TO OUR HEADPHONE FINDER
-                </h1>
-                <div id="content">
-                    <p>Meet our Headphone Gurus.</p>
-                    <p>They obsess over every headphone so you get the perfect one. They have spent years reviewing & listening to countless headphones every day. Our Headphone Gurus are the go-to guys for everything audio.</p>
-                    <p>Our Headphone Finder puts together their top recommendations. In 4 easy steps, find the perfect headphones for you.</p>
-                    <button id="btn" type="submit"> BEGIN HERE</button>
-                </div>
-            </div>
+      <div id="logo">
+        <img
+          src="https://d33x1o3gj9io8i.cloudfront.net/images/550/lg_48SNi1u0Rg2PAYzsx3bc"
+        />
+        <div>
+          <h1>WELCOME TO OUR HEADPHONE FINDER</h1>
+          <div id="content">
+            <p>Meet our Headphone Gurus.</p>
+            <p>
+              They obsess over every headphone so you get the perfect one. They
+              have spent years reviewing & listening to countless headphones
+              every day. Our Headphone Gurus are the go-to guys for everything
+              audio.
+            </p>
+            <p>
+              Our Headphone Finder puts together their top recommendations. In 4
+              easy steps, find the perfect headphones for you.
+            </p>
+            <button id="btn" type="submit">BEGIN HERE</button>
+          </div>
         </div>
-        
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>
 <script>
-    document.getElementById('btn').addEventListener('click',goto);
-    function goto(){
-        window.location.href="page2.html";
-    }
+  document.getElementById("btn").addEventListener("click", goto);
+  function goto() {
+    window.location.href = "page2.html";
+  }
 </script>
