@@ -9,92 +9,7 @@
       href="http://www.google.com/s2/favicons?domain=https://www.headphonezone.in/"
     />
     <title>Account</title>
-    <style>
-      h1 {
-        margin-top: 100px;
-        text-align: center;
-        color: #444444;
-        letter-spacing: -1px;
-        font-weight: 800;
-        font-size: 28px;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      p {
-        text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #444444;
-        font-size: 14px;
-      }
-      form > div {
-        display: block;
-        width: 450px;
-        margin: auto;
-        margin-top: 60px;
-      }
-
-      form > div > input {
-        width: 425px;
-        height: 52px;
-        margin-top: 15px;
-        border-radius: 30px;
-        padding-left: 20px;
-        border: 1px solid #e3e3e3;
-        font-size: 15px;
-      }
-      button {
-        width: 100%;
-        height: 52px;
-        margin-top: 25px;
-        border-radius: 30px;
-        border: none;
-        background: #3b07ff;
-        color: white;
-        font-weight: bold;
-        font-size: 14px;
-      }
-      form > div > span {
-        display: block;
-        margin-top: 30px;
-        margin-bottom: 50px;
-        text-align: center;
-        text-decoration: none;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #8e8891;
-      }
-      #anchor {
-        background-color: transparent;
-        color: #8e8891;
-        text-decoration: underline;
-      }
-      #anchor:hover {
-        text-decoration: underline;
-        color: #444444;
-        text-decoration-color: #444444;
-      }
-      @media screen and (min-width: 200px) and (max-width: 500px) {
-        button {
-          width: 300px;
-        }
-        form > div > input {
-          width: 275px;
-        }
-        form > div {
-          margin: auto;
-          width: 300px;
-        }
-      }
-      @media screen and (min-width: 501px) and (max-width: 700px) {
-        form > div > input {
-          width: 360px;
-        }
-        button {
-          width: 380px;
-        }
-        form > div {
-          width: 380px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="recover.css" />
   </head>
   <body>
     <div>
@@ -121,26 +36,5 @@
     </div>
   </body>
 
-  <script>
-    let userData = JSON.parse(localStorage.getItem("signupData"));
-    document.querySelector("#button").addEventListener("click", getData);
-    function getData() {
-      let loginEmail = document.querySelector("#email").value;
-      let count = 0;
-      let password = "";
-      for (let i = 0; i < userData.length; i++) {
-        if (userData[i].userEmail == loginEmail) {
-          count++;
-          password = userData[i].password;
-        }
-      }
-      if (count === 1) {
-        alert("Your recovery password send to Email.");
-        window.location.href = "/index.html";
-      } else {
-        alert("Your email or password may wrong.");
-        window.location.href = "/index.html";
-      }
-    }
-  </script>
+  <script src="recover.js"></script>
 </html>

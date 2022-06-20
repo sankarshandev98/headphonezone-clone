@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="icon"
-      href="http://www.google.com/s2/favicons?domain=https://www.headphonezone.in/"
-    />
-    <title></title>
+      href="http://www.google.com/s2/favicons?domain=https://www.headphonezone.in/"/>
+    <title>HeadphoneZone</title>
     <style>
       #Container {
         width: 85.5%;
@@ -119,12 +118,4 @@
     </div>
   </body>
 </html>
-<script>
-  let data = JSON.parse(localStorage.getItem("signupData"));
-  let fname = "";
-  data.forEach(function (elem) {
-    fname = elem.userFname;
-    document.querySelector("#hname").innerHTML =
-      " HELLO  " + fname.toUpperCase();
-  });
-</script>
+<script src="contact.js"></script>

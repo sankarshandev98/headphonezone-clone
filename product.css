@@ -1,0 +1,199 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  #img-container {
+    width: 100%;
+    height: 600px;
+  }
+  img {
+    width: 100%;
+    height: 600px;
+  }
+  #container {
+    height: 600px;
+    margin: 0px 50px 0px 50px;
+    display: flex;
+  }
+  #container > div:first-child {
+    position: sticky;
+    width: 350px;
+    height: 600px;
+  }
+
+  h2 {
+    display: block;
+    font-size: 18px;
+    font-family: " Roboto", sans-serif;
+    color: #444444;
+    letter-spacing: 0.1em;
+    margin-top: 10px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  #container > div:last-child {
+    width: 100%;
+    height: 1200px;
+    margin: 20px;
+  }
+  #product {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 450px);
+    gap: 20px;
+  }
+  #product > div {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  #product > div > a > img {
+    width: 100%;
+    height: 300px;
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+  }
+  a > img + span {
+    display: block;
+    font-size: 14px;
+    font-family: " Roboto", sans-serif;
+    color: #444444;
+    letter-spacing: 0.1em;
+    margin-top: 10px;
+    font-weight: 700;
+  }
+  span {
+    display: block;
+    font-size: 12px;
+    font-family: " Roboto", sans-serif;
+    color: #444444;
+    margin-top: 10px;
+    font-weight: 600;
+  }
+  #span1 {
+    display: flex;
+    margin-top: 10px;
+    font-family: " Roboto", sans-serif;
+  }
+  #span1 > span:first-child {
+    display: flex;
+    width: 100px;
+    margin: auto;
+    margin-left: 80px;
+    font-size: 16px;
+    color: blue;
+  }
+  #span1 > span:last-child {
+    display: flex;
+    width: 100px;
+    margin: auto;
+    margin-left: -20px;
+    font-size: 16px;
+    color: #444444;
+    text-decoration: line-through;
+  }
+  #icon > img {
+    margin-top: 10px;
+    width: 50%;
+    height: 20px;
+  }
+  .checked {
+    color: orange;
+  }
+  #sort {
+    margin-top: 20px;
+    font-size: 18px;
+    position: sticky;
+    margin-right: 50px;
+    text-align: right;
+    color: #444444;
+  }
+  select {
+    width: 80px;
+    margin: 10px;
+    border: white;
+  }
+
+  select:focus {
+    min-width: 80px;
+    width: 200;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 580px) {
+    #product {
+      grid-template-columns: repeat(1, 1fr);
+      margin: auto;
+    }
+    #img-container {
+      height: 300px;
+    }
+    #container > div:first-child {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 581px) and (max-width: 1000px) {
+    #product {
+      grid-template-columns: repeat(2, 1fr);
+      margin: auto;
+    }
+    #img-container {
+      height: 300px;
+    }
+    #container > div:first-child {
+      display: none;
+    }
+  }
+  /* .dropdown-btn {
+padding: 6px 8px 6px 16px;
+text-decoration: none;
+font-size: 20px;
+color: #818181;
+display: block;
+border: none;
+background: none;
+width: 100%;
+text-align: left;
+cursor: pointer;
+outline: none;
+}
+.dropdown-container {
+display: none;
+background-color: #262626;
+padding-left: 8px;
+} */
+
+  /* sourav done from here */
+  .accordion {
+    width: 100%;
+    background-color: white;
+  }
+  .accordion_btn {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    color: black;
+    text-align: left;
+    background-color: white;
+    font-size: 14px;
+    padding: 10px 0 10px 0px;
+    border-color: transparent;
+  }
+  .accordion_btn::after {
+    content: "\25be";
+    float: right;
+    transform: scale(2);
+  }
+  .accordion_content {
+    border: transparent;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }

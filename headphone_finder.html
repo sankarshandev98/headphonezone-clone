@@ -4,72 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="http://www.google.com/s2/favicons?domain=https://www.headphonezone.in/"/>
     <title>Headphone Finder 2</title>
-    <link rel="shotcut icon" type="image/png" href="logo.png" />
-    <style>
-      #cards {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(1, auto);
-      }
-      #cards > div > img {
-        width: 96%;
-      }
-      h1 {
-        width: 85%;
-        font-size: 42px;
-        font-weight: 600;
-        letter-spacing: 2px;
-        color: rgb(68, 68, 68);
-        line-height: 1.2;
-        margin: auto;
-        text-align: left;
-        align-items: center;
-        margin-bottom: 20px;
-        margin-top: 70px;
-      }
-      #btn {
-        border: 1px solid rgb(60, 7green, 255blue);
-        color: white;
-        font-size: 18px;
-        letter-spacing: 2px;
-        border-radius: 10px;
-        background-color: rgb(60, 7, 255);
-        padding: 16px;
-        border-radius: 50px;
-        letter-spacing: 2px;
-        font-weight: 600;
-        cursor: pointer;
-        border-color: transparent;
-        margin-top: 20px;
-        margin: auto;
-        text-align: center;
-        align-items: center;
-      }
-      #btn:hover {
-        background-color: white;
-        color: rgb(60, 7, 255);
-        border-color: rgb(60, 7, 255);
-      }
-      #content {
-        width: 85%;
-        font-weight: 400;
-        line-height: 1.5;
-        font-size: 22px;
-        color: rgb(68, 68, 68);
-        margin: auto;
-        text-align: left;
-        align-items: center;
-      }
-      /* media queries */
-      @media all and (min-width: 100px) and (max-width: 780px) {
-        #cards {
-          grid-template-columns: repeat(1, 1fr);
-          grid-template-rows: repeat(2, auto);
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="headphone_finder.css">
   </head>
   <body>
     <div id="cards">
@@ -97,9 +36,4 @@
     </div>
   </body>
 </html>
-<script>
-  document.getElementById("btn").addEventListener("click", goto);
-  function goto() {
-    window.location.href = "page2.html";
-  }
-</script>
+<script src="headphone_finder.js"></script>
